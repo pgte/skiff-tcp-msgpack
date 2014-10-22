@@ -1,0 +1,45 @@
+{
+  "name": "skiff-tcp-msgpack",
+  "version": "0.6.5",
+  "description": "Msgpack over TCP transport provider for Skiff",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node test",
+    "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
+    "codestyle": "jscs -p google lib/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pgte/skiff-tcp-msgpack.git"
+  },
+  "keywords": [
+    "skiff",
+    "raft",
+    "consensus",
+    "transport",
+    "tcp",
+    "msgpack"
+  ],
+  "author": "pgte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pgte/skiff-tcp-msgpack/issues"
+  },
+  "homepage": "https://github.com/pgte/skiff-tcp-msgpack",
+  "devDependencies": {
+    "jscs": "^1.7.1",
+    "jshint": "^2.5.6",
+    "pre-commit": "0.0.9"
+  },
+  "pre-commit": [
+    "codestyle",
+    "jshint",
+    "test"
+  ],
+  "dependencies": {
+    "abstract-skiff-transport": "0.6.3",
+    "async": "^0.9.0",
+    "msgpack5": "^1.2.0",
+    "reconnect-net": "0.0.0"
+  }
+}

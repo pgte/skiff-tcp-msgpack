@@ -16,11 +16,6 @@ var options = {
 
     function onConnection(c) {
 
-      var oldWrite = c.write;
-      c.write = function (o) {
-        oldWrite.apply(c, arguments);
-      };
-
       server.__connections.push(c);
 
       var encoder = msgpack.createEncodeStream();

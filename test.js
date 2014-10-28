@@ -63,14 +63,18 @@ var options = {
   connect: function() {
     var self = this;
 
-    var c = net.connect(8081);
+    var c = net.connect(8081, cb);
     var encoder = msgpack.createEncodeStream();
     var decoder = msgpack.createDecodeStream();
     encoder.pipe(c).pipe(decoder);
-    encoder.write({hello: self.listenPeerId});
     decoder.on('data', function() {});
 
     return c;
+
+    function cb(err) {
+      encoder.write({hello: {id: self.listenPeerId, meta: {}}});
+      console.log('wrote hello');
+    }
   },
   disconnect: function(c) {
     c.end();

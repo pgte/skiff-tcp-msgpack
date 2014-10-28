@@ -37,7 +37,7 @@
     "test"
   ],
   "dependencies": {
-    "abstract-skiff-transport": "0.7.1",
+    "abstract-skiff-transport": "0.8.0",
     "async": "^0.9.0",
     "msgpack-stream": "0.0.12",
     "reconnect-net": "0.0.0"

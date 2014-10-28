@@ -1,6 +1,6 @@
 {
   "name": "skiff-tcp-msgpack",
-  "version": "0.7.3",
+  "version": "0.8.0",
   "description": "Msgpack over TCP transport provider for Skiff",
   "main": "lib/index.js",
   "scripts": {
